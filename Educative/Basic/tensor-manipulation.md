@@ -178,4 +178,47 @@ print(a)
 ```
 
 
-###### Tensor Metadata
+#### Tensor Metadata
+
+###### Getting type from dtype
+The dtype attribute of a PyTorch tensor can be used to
+get its type information.
+
+The code below creates a tensor with the float type and
+prints the type information from dtype. You can try the
+code at the end of this lesson.
+
+
+```python
+import torch
+a = torch.tensor([1, 2, 3], dtype=torch.float)
+print(a.dtype)
+```
+
+
+###### Getting the number of dim
+As shown in the code below, the number of dimensions of a
+tensor in PyTorch can be obtained using the attribute ndim
+or using the function dim() or its alias ndimensions().
+
+```python
+import torch
+
+a = torch.ones((3, 4, 6))
+print(a.ndim)
+print(a.dim())
+
+```
+
+
+###### Getting the number of elements
+PyTorch provides two ways to get the number of elements of
+a tensor, nelement() and numel(). Both of them are functions.
+
+```python
+import torch
+
+a = torch.ones((3, 4, 6))
+print(a.numel())
+
+```
