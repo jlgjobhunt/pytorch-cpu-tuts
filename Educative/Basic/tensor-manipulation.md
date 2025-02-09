@@ -389,3 +389,21 @@ b = torch.tensor([1, 2, 3], dtype=torch.float)
 print("The dtype for b is {}".format(b.dtype))
 
 ```
+
+
+###### Creating tensors from specified APIs
+PyTorch provides some useful functions to create tensors
+with the specified type.
+
+* FloatTensor: This function creates tensors with torch.float32 type.
+* IntTensor: This function creates tensors with torch.int32 type.
+* DoubleTensor: This function creates tensors with torch.float64 type.
+* LongTensor: This function creates tensors with torch.long type.
+
+```python
+import torch
+
+d = torch.FloatTensor([1, 2, 3])
+e = torch.FloatTensor([1, 2, 3])
+
+```
