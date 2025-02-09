@@ -21,7 +21,6 @@ print(a.dim())
 
 
 ###### Getting the number of elements
-
 # import torch
 
 
@@ -32,7 +31,7 @@ print(a.numel())
 
 ###### Getting the device 
 ###### & whether tensor is on CPU or GPU.
-import torch
+# import torch
 
 a = torch.randn((2, 3, 4), dtype=torch.float)
 
@@ -43,7 +42,3 @@ print("The shape of tensor a is {}. \n".format(a.shape))
 
 print("The dims of tensor a is {}.".format(a.dim()))
 print("The dims of tensor a is {}. \n".format(a.ndim))
-
-
-
-      
