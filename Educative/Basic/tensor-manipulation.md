@@ -449,3 +449,31 @@ a = torch.tensor([1, 2, 3])
 b = a.to('cpu')
 
 ```
+
+
+#### Selecting Elements from a Tensor
+
+###### Selecting tensor with index
+If you are already familiar with the NumPy array,
+you can use the same methods to select tensors by
+[] operations
+
+Take a 2-dimensional tensor as an example. Let's consider it as a matrix.
+
+* tensor[2, 3]: Get only one value.
+* tensor[:, 1]: Get the second column from the tensor.
+* tensor[1, :]: Get the second row from the tensor.
+
+For higher-dimensional tensors. the operations are the same.
+Such as tensor[:, 2, :].
+
+```python
+import torch
+
+a = torch.arange(1, 10).reshape((3, 3))
+
+print("Original Tensor: /n")
+print(a[1,1])
+
+
+```
