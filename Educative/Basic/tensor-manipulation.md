@@ -472,8 +472,38 @@ import torch
 
 a = torch.arange(1, 10).reshape((3, 3))
 
-print("Original Tensor: /n")
+print("Original Tensor: \n")
 print(a[1,1])
 
 
 ```
+
+###### Selecting tensor with index_select
+PyTorch provides a function index_select which enables us to
+select some elements from a tensor with indices.
+
+At first, we need to create a tensor(Long type) that indicates the indices we want to select. Since we want to use
+index to locate the element in a tensor, this tensor must be of Long type.
+
+index_select requires the following parameters:
+
+* The first parameter is the tensor we want to select.
+* dim: It indicates the dimension in which we index. In this
+       example, the tensor is a 2-dimensions tensor. dim=0
+       means the row, dim=1 means the column.
+* index: The 1-D tensor containing the indices to index.
+
+
+```pytorch
+import torch
+
+a = torch.arange(1, 10).reshape((3, 3))
+
+indices = torch.LongTensor([0, 2])
+
+result = torch.index_select(a, dim=0, index=indices)
+print(result)
+
+```
+
+
