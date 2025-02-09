@@ -424,3 +424,28 @@ c = b.to(dtype=torch.int64)
 print("The dtype for c is {}".format(c.dtype))
 
 ```
+
+
+###### Casting tensors into different device type
+One of the most important features of PyTorch tensors is
+that they can work on GPU devices. However, to enable that,
+we need to first copy the tensor to a GPU. We can do this
+using the to() function. Moreover, it could cast tensors
+between different device types.
+
+There is a parameter device in to(). We can pass the device
+id. If you don't specify any device, the tensor would be
+running on the CPU.
+
+The to() function can take as an argument the device id where
+we want to run the tensor. If you don't specify any device,
+by default the tensor would be run on the CPU.
+
+
+```python
+import torch
+# Select the cpu device for running the tensor.
+a = torch.tensor([1, 2, 3])
+b = a.to('cpu')
+
+```
