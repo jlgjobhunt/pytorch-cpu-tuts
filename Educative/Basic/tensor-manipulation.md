@@ -600,3 +600,30 @@ vectorT3 = torch.ones((3, 1, 2, 1, 2))
 print("The original shape of vectorT3 is {}.".format(vectorT3.shape))
 
 ```
+
+
+
+###### Un-squeezing a Tensor
+Since we can remove one dim from a tensor, we may want to
+add one more dim to a tensor as well. For example, a tensor's
+shape is (3, 3), you could add one dim like (3, 1, 3) by
+unsqueeze().
+
+In NumPy, the function expand_dims() does the same work as
+unsqueeze().
+
+* dim: This parameter indicates the index at which to insert the dimension.
+
+
+```python
+import torch
+
+vectorT4 = torch.ones((3,3))
+print("The original shape of vectorT4 is {}.".format.(vectorT4.shape))
+print("The original vectorT4 tensor is {}.".format(vectorT4))
+
+vectorT5 = torch.unsqueeze(vectorT4, dim=1)
+print("The shape of vectorT4 has been mutated in vectorT5 to be {}.".format(vectorT5.shape))
+print("The new tensor is {}.".format(a))
+
+```

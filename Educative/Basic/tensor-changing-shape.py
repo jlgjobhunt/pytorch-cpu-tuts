@@ -30,3 +30,5 @@ print("The new tensor is {}".format(vectorT2))
 vectorT3 = torch.ones((3, 1, 2, 1, 2))
 print("The original shape of vectorT3 is {}.".format(vectorT3.shape))
 
+
+# Un-squeezing a Tensor
