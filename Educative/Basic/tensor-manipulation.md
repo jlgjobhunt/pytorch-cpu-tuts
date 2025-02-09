@@ -407,3 +407,20 @@ d = torch.FloatTensor([1, 2, 3])
 e = torch.FloatTensor([1, 2, 3])
 
 ```
+
+
+###### Casting tensors into different types
+The Tensor class has the method to(), which can cast tensors
+into different types. To cast a tensor, call its to() method
+and pass the dtype as the argument, as shown in the code below.
+
+```python
+import torch
+
+b = torch.tensor([1, 2, 3], dtype=torch.float)
+print("The dtype for b is {}".format(b.dtype))
+
+c = b.to(dtype=torch.int64)
+print("The dtype for c is {}".format(c.dtype))
+
+```
