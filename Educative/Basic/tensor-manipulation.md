@@ -494,7 +494,7 @@ index_select requires the following parameters:
 * index: The 1-D tensor containing the indices to index.
 
 
-```pytorch
+```python
 import torch
 
 a = torch.arange(1, 10).reshape((3, 3))
@@ -503,6 +503,38 @@ indices = torch.LongTensor([0, 2])
 
 result = torch.index_select(a, dim=0, index=indices)
 print(result)
+
+```
+
+###### Selecting tensor with a mask
+The mask tensor is BoolTensor, which identifies which elements are chosen. The shape of the mask tensor and the original tensor doesn't need to match, but they must be broadcastable.
+
+A mask is quite similar to a bitmasking in C and C++ bit operations. Select the element when the corresponding location is True in the mask.
+
+In short, PyTorch enables us to pass a tensor of Boolean
+type to masked_select, which selects desired elements from
+another tensor.
+
+The first parameter is the original tensor you want to select and the second is the mask tensor.
+
+Unlike other functions, the result of masked_select is a one-dimensional tensor.
+
+
+```python
+import torch
+
+matrixT = torch.arrange(1, 10).reshape((3,3))
+
+maskBT = torch.BoolTensor([
+  [True, False, True],
+  [False, False, True],
+  [True, False, False]
+])
+
+print("The mask tensor is: \n{}".format(maskBT))
+print("The original tensor is: \n{}".format(matrixT))
+result = torch.masked_select(matrixT, maskBT)
+print("The result is {}".format(result))
 
 ```
 
