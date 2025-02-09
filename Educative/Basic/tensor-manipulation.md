@@ -619,11 +619,11 @@ unsqueeze().
 import torch
 
 vectorT4 = torch.ones((3,3))
-print("The original shape of vectorT4 is {}.".format.(vectorT4.shape))
+print("The original shape of vectorT4 is {}.".format(vectorT4.shape))
 print("The original vectorT4 tensor is {}.".format(vectorT4))
 
 vectorT5 = torch.unsqueeze(vectorT4, dim=1)
 print("The shape of vectorT4 has been mutated in vectorT5 to be {}.".format(vectorT5.shape))
-print("The new tensor is {}.".format(a))
+print("The new tensor is {}.".format(vectorT5))
 
 ```
