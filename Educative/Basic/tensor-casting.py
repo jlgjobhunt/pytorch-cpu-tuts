@@ -58,3 +58,19 @@ print("The dtype for g is {}".format(g.dtype))
 g2 = g.to(dtype=torch.int16)
 print("The dtype for g2 is {}".format(g2.dtype))
 
+# torch.uint32
+h = torch.tensor([32], dtype=torch.uint32)
+print("The dtype for h is {}".format(h.dtype))
+
+# torch.uint32 to torch.int32
+h2 = h.to(dtype=torch.int32)
+print("The dtype for h2 is {}".format(h2.dtype))
+
+# torch.uint64
+i = torch.tensor([64], dtype=torch.uint64)
+print("The dtype for i is {}".format(i.dtype))
+
+# torch.uint64 to torch.int64
+i2 = i.to(dtype=torch.int64)
+print("The dtype of i2 is {}".format(i2.dtype))
+
