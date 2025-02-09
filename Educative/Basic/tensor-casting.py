@@ -74,3 +74,26 @@ print("The dtype for i is {}".format(i.dtype))
 i2 = i.to(dtype=torch.int64)
 print("The dtype of i2 is {}".format(i2.dtype))
 
+# torch.float16
+j = torch.tensor([16], dtype=torch.float16)
+print("The dtype for j is {}".format(j.dtype))
+
+# torch.float16 to torch.uint8
+j2 = j.to(dtype=torch.uint8)
+print("The dtype for j2 is {}".format(j2.dtype))
+
+# torch.float32
+k = torch.tensor([32], dtype=torch.float32)
+
+# torch.float32 to torch.uint8
+k2 = k.to(dtype=torch.uint8)
+print("The dtype for k2 is {}".format(k2.dtype))
+
+# torch.float64
+l = torch.tensor([64], dtype=torch.float64)
+print("The dtype for l is {}".format(l.dtype))
+
+# torch.float64 to torch.uint8
+l2 = l.to(dtype=torch.uint8)
+print("The dtype for l2 is {}".format(l2.dtype))
+
